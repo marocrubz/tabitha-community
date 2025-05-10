@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="clipboard-write 'self'; clipboard-read 'self'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Church Attendance</title>
+  <meta name="facebook-domain-verification" content="ef8q9ehc8p1ievy7vtpub761o7p011">
+  <meta name="robots" content="max-image-preview:large">
+  <link href="/frontend/styles/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <div id="root">
+    <div class="h-full">
+        <div class="bg-black absolute top-0 left-0 w-full h-full -z-[1]">
+        </div>
+        <div class="relative flex flex-col h-full">
+            <main class="flex flex-1 overflow-hidden md:flex-col">
+                <div class="w-full h-auto overflow-y-auto">
+                    <div class="w-full flex justify-center items-center">
+                        <section class="bg-dark px-8 rounded-xl max-w-112.5 m-6 py-10">
+                            <div class="flex flex-col justify-center items-center mb-6">
+                                <img src="/frontend/img/success.svg" width="40" >
+                                
+                                <h2 class="text-center text-light font-semibold text-2xl mt-6">Attendance Recorded!</h2>
+                                <p class="text-sm text-light leading-tight font-normal text-center mt-2">
+                                    <strong>Attendee : </strong><span id="userName"></span></p>
+                                <p class="text-sm text-light leading-tight font-normal text-center mt-2">
+                                        <span id="clockinDate"></span></p>
+                                <p class="text-sm text-light leading-tight font-normal text-center mt-2">
+                                        <span id="clockinTime"></span></p>
+                                 <p class="text-sm text-light leading-tight font-normal text-center mt-2">
+                                        <span id="meetingType">Benevolence Meeting</span></p>
+                                
+                                   
+                                  
+                                
+                            </div>
+                            
+                                <button onclick="window.location.href='index.html'"
+                                    style="background-color: #7AC142"
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-semibold leading-tight ring-offset-white transition-colors focus-visible:outline-none border border-primary duration-300 disabled:border-gray disabled:bg-gray disabled:text-light disabled:text-opacity-40 disabled:pointer-events-none outline-none bg-primary hover:bg-opacity-90 text-light w-full h-11 px-4 py-2 mt-6"
+                                    type="submit">Scan Another QR Code / Meeting link</button>
+                                    <div id="message"></div>
+                            
+                            <p class="font-normal text-xs text-dark-gray text-center mt-6">Ensure you enter a valid name as a team member
+                                If your'e having issues clocking In &nbsp;<a class="text-primary text-xs underline"
+                                    href="/PrivacyPolicy">Contact Team Admin</a></p>
+                        </section>
+                        
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+  <script src="/frontend/js/script.js"></script>
+  <script src="/frontend/js/success.js"></script>
+
+</body>
+</html>
