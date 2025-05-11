@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5010/api/attendance";
+const API_URL = "https://your-backend-url.onrender.com/api/attendance";
 
 
 function submitAttendance(event) {
