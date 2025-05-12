@@ -1,5 +1,3 @@
-const API_URL = "https://tabitha-community.onrender.com/api/attendance";
-
 // loader.js
 const loaderHTML = `
   <div id="page-loader">
@@ -36,6 +34,7 @@ const loaderHTML = `
   </style>
 `;
 
+const API_URL = "https://tabitha-community.onrender.com/api/attendance";
 
 function submitAttendance(event) {
     event.preventDefault(); // Prevent form from submitting normally
