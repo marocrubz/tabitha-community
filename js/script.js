@@ -1,4 +1,4 @@
-const API_URL = "https://your-backend-url.onrender.com/api/attendance";
+const API_URL = "https://tabitha-community.onrender.com/api/attendance";
 
 
 function submitAttendance(event) {
