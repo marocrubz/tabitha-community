@@ -1,4 +1,13 @@
-// loader.js
+function showLoader() {
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.style.display = "flex";
+}
+
+function hideLoader() {
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.style.display = "none";
+}
+
 const loaderHTML = `
   <div id="page-loader">
     <div class="spinner"></div>
@@ -21,7 +30,7 @@ const loaderHTML = `
     .spinner {
       width: 60px;
       height: 60px;
-      border: 4px solid rgba(102, 18, 18, 0.3);
+      border: 4px solid rgba(81, 211, 34, 0.3);
       border-top-color: red;
       border-radius: 50%;
       animation: spin 1s linear infinite;
@@ -33,6 +42,16 @@ const loaderHTML = `
     }
   </style>
 `;
+document.body.insertAdjacentHTML('afterbegin', loaderHTML);
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.style.display = "none";
+});
+
+
+
+
 
 const API_URL = "https://tabitha-community.onrender.com/api/attendance";
 
