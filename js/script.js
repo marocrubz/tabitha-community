@@ -28,8 +28,8 @@ const loaderHTML = `
       align-items: center;
     }
     .spinner {
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       border: 4px solid rgba(81, 211, 34, 0.3);
       border-top-color: red;
       border-radius: 50%;
