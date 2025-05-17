@@ -294,6 +294,7 @@ const loaderHTML = `
           <td>${new Date(user.timestamp).toLocaleDateString()}</td>
           <td>${new Date(user.timestamp).toLocaleTimeString()}</td>
           <td>${user.meetingType || 'Benevolence'}</td>
+          <td>${user.location || 'N/A'}</td>
         </tr>
       `).join('');
     }
@@ -324,6 +325,7 @@ const loaderHTML = `
           new Date(user.timestamp).toLocaleDateString(),
           new Date(user.timestamp).toLocaleTimeString(),
           user.meetingType || 'N/A'
+          
         ])
       ]
       .map(row => row.join(','))
