@@ -63,11 +63,12 @@ function submitAttendance(event) {
 
   navigator.geolocation.getCurrentPosition(
     async (position) => {
+      showLoader(); // 👈 show the loader on button click
+
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
 
       try {
-        // Reverse geocode
         const locationRes = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
         const locationData = await locationRes.json();
         const location = locationData.display_name || `${lat},${lon}`;
@@ -85,6 +86,8 @@ function submitAttendance(event) {
 
         const data = await res.json();
 
+        hideLoader(); // 👈 hide after API call
+
         if (data.message) {
           const params = new URLSearchParams({ name, time, date, meetingType, location });
           window.location.href = `success.html?${params}`;
@@ -92,6 +95,7 @@ function submitAttendance(event) {
           document.getElementById("message").innerText = data.message || "Error occurred.";
         }
       } catch (error) {
+        hideLoader(); // 👈 hide even if there's an error
         document.getElementById("message").innerText = "Error recording attendance.";
         console.error("Error during clock-in:", error);
       }
